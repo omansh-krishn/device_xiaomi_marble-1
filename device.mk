@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V4
+
 # Dtb
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/prebuilts/dtb:dtb.img
@@ -96,6 +100,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     AospWifiResOverlay \
+    ApertureResOverlay \
     CarrierConfigResCommon \
     FrameworksResCommon \
     FrameworksResOverlay \
@@ -106,9 +111,6 @@ PRODUCT_PACKAGES += \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon
-
-PRODUCT_PACKAGES += \
-    ApertureResOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
